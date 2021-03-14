@@ -17,14 +17,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - joblib
     - matplotlib-base >=2.1.2
     - numpy
     - pandas
     - psutil
-    - python
+    - python >=3.6
     - scikit-learn
     - scipy
 
