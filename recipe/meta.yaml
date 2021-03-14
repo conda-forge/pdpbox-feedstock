@@ -1,18 +1,18 @@
 {% set name = "PDPbox" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "2eae5a20004657f48ddd5b00f2fb74dd54f9de891c25ec7935a8fd471f9186f9"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c8ec10cf234c861410f7246d711b6c66fc043ae03113e7f2829ff1fd3c50f378
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -33,11 +33,11 @@ test:
     - pdpbox
 
 about:
-  home: "https://github.com/SauceCat/PDPbox"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE.txt"
-  summary: "Python partial dependence plot toolbox"
+  home: https://github.com/SauceCat/PDPbox
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: Python partial dependence plot toolbox
 
 extra:
   recipe-maintainers:
