@@ -1,5 +1,5 @@
 {% set name = "PDPbox" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8ec10cf234c861410f7246d711b6c66fc043ae03113e7f2829ff1fd3c50f378
+  sha256: 86931543e0032803ba38ea4d7486146fa8d715451e40c90ec874b2d2ebb707fe
 
 build:
   number: 0
