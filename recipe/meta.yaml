@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - python >=3.6
     - joblib>=1.1.0
     - matplotlib-base >=3.6.2
     - numpy >=1.21.5
