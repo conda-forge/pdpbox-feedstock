@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 86931543e0032803ba38ea4d7486146fa8d715451e40c90ec874b2d2ebb707fe
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - joblib >=1.1.0
     - matplotlib-base >=3.6.2
     - numpy >=1.21.5
@@ -41,6 +41,7 @@ test:
     - pdpbox
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
